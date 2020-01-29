@@ -1,12 +1,28 @@
 import auth0 from 'auth0-js';
 
+require('dotenv').config();
+
+// const domainID = process.env.AUTH0_DOMAIN;
+console.log('AUTH0_DOMAIN=' + process.env.AUTH0_DOMAIN);
+// const auth0Option = {
+//   // the following three lines MUST be updated
+//   // domain: process.env.AUTH0_DOMAIN,
+//   domain: 'dev-gviqn817.auth0.com',
+//   audience: 'dev-gviqn817.auth0.com/userinfo',
+//   clientID: '1eMZjBiIqulUf5Gt4ryWY7cKmlhwsFiH',
+//   redirectUri: 'http://localhost:3000/callback',
+//   responseType: 'id_token',
+//   scope: 'openid profile'
+// };
+
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
       // the following three lines MUST be updated
-      domain: 'kbaries.auth0.com',
-      audience: 'https://kbaries.auth0.com/userinfo',
-      clientID: 'rhfPGRNADWc6dIzv1b2jN91FFQGe90oG',
+      // domain: process.env.AUTH0_DOMAIN,
+      domain: 'dev-gviqn817.auth0.com',
+      audience: 'dev-gviqn817.auth0.com/userinfo',
+      clientID: '1eMZjBiIqulUf5Gt4ryWY7cKmlhwsFiH',
       redirectUri: 'http://localhost:3000/callback',
       responseType: 'id_token',
       scope: 'openid profile'

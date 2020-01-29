@@ -49,12 +49,12 @@ const checkJwt = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: `https://kbaries.auth0.com/.well-known/jwks.json`
+    jwksUri: `https://dev-gviqn817.auth0.com/.well-known/jwks.json`
   }),
 
   // Validate the audience and the issuer.
   audience: 'rhfPGRNADWc6dIzv1b2jN91FFQGe90oG',
-  issuer: `https://kbaries.auth0.com`,
+  issuer: `https://dev-gviqn817.auth0.com`,
   algorithms: ['RS256']
 });
 
